@@ -1,0 +1,17 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/index.html",
+  "scripts": {
+    "start": "http-server -a localhost -p 9000"
+  },
+  "author": "Dimitar Stefanovski",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^0.8.18"
+  },
+  "dependencies": {
+    "angular-ui-router": "^1.0.3"
+  }
+}

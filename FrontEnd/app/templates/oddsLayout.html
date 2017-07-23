@@ -1,0 +1,34 @@
+<div class="col-sm-2">
+    <button type="button" class="btn btn-success" ng-click="vm.goBack()">Success</button>
+</div>
+<div class="col-sm-8">
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Pairs</th>
+            <th ng-repeat="odd in vm.oddsObjects">
+                <table>
+                    <tr>
+                        <th ng-repeat="o in odd.odds">
+                            {{o.name}}
+                        </th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+        <tr ng-repeat="sl in vm.specificLeagueListObjects">
+            <td>{{sl.sd}}</td>
+            <td>{{sl.h}} - {{sl.a}}</td>
+            <td ng-repeat="s in sl.oddsPrint">
+                <table>
+                    <tr>
+                        <th ng-repeat="obj in s.odds">
+                            {{obj.value}}
+                        </th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+

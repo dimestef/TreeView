@@ -1,0 +1,50 @@
+<div class="col-sm-4"></div>
+<div class="col-sm-4">
+    <ul class="ulSport">
+        <li class="" ng-repeat="sport in vm.dataTreeSportObjects" ng-init="sportIndex = $index">
+            <div class="panel-group">
+                <div class="panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-target="#collapse2{{sportIndex}}" href="javascript:void(0);">{{sport.name}}</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2{{sportIndex}}" class="panel-collapse collapse">
+                        <ul class="ulCountries">
+                            <li class="" ng-repeat="country in sport.countries" ng-init="countryIndex = $index">
+
+                                <div class="panel-group">
+                                    <div class="panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-target="#collapse3{{sportIndex}}{{countryIndex}}" href="javascript:void(0);">{{country.name}}</a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapse3{{sportIndex}}{{countryIndex}}" class="panel-collapse collapse">
+                                            <ul class="ulLeagues">
+                                                <li class="" ng-repeat="league in country.leagues">
+                                                    <div class="panel-group">
+                                                        <div class="panel-default">
+                                                            <div class="panel-heading">
+                                                                <h4 class="panel-title">
+                                                                    <a href="javascript:void(0);" ng-click="vm.broadcastLeague(league)">{{league.name}}</a>
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </li>
+    </ul>
+</div>
+<div class="col-sm-4"></div>
